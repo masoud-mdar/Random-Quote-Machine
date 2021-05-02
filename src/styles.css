@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.div {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
+@keyframes arrows {
+    0%,
+    100% {
+        color: black;
+        transform: translateY(0);
+    }
+
+    50% {
+        color: #3AB493;
+        transform: translateY(20px);
+    }
+}
+
+.span {
+    --delay: 0s;
+    animation: arrows 1s var(--delay) infinite ease-in;
+}
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "oldenburg";
+    white-space: nowrap;
+    letter-spacing: 00.15em;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.quote-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 15vw;
+    text-align: justify;
+}
+
+.text-box {
+    text-align: left;
+    height: 100%;
+    margin-bottom: 25px;
+    overflow: auto;
+    white-space: normal;
+}
+
+.text {
+    overflow:hidden;
+    border-right: 0.15em solid black;
+    white-space: nowrap;
+    margin: 0 ;
+    letter-spacing: 0.15em;
+    font-family: "goldman";
+    animation: type 4s steps(40, end),
+    blink .5s step-end infinite;
+}
+
+@keyframes type {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes blink {
+    from, to {border-color: transparent;}
+    50% {border-color: black;}
+}
+
+.author {
+    font-family: "goldman";
+    letter-spacing: 00.15em;
+    white-space: nowrap;
+}
+
+.btn {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4CAF50;
+    font-weight: bold;
+    border-radius: 50%;
+    color: white;
+    padding: 10px 0;
+    margin-top: 25px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 500ms;
+
+}
+
+.btn:hover {
+    background-color: white;
+    color: #4CAF50;
+    border-color: #4CAF50;
+}
