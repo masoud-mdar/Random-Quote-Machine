@@ -27,6 +27,7 @@ class App extends React.Component {
         }),2000)
 
     }
+    
 
     handleClick(){
         const l = this.state.data.length;
